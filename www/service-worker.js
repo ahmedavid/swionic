@@ -35,7 +35,6 @@ self.addEventListener('install', function(event) {
       return cache.addAll(
         [
           './build/main.js',
-          './build/0.js',
           './build/vendor.js',
           './build/main.css',
           './build/polyfills.js',
