@@ -52,7 +52,7 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
   console.log('INTERCEPTING')
   event.respondWith(
-    caches.open('trainsCacheImgs').then(function(cache) {
+    caches.open('trainsCache').then(function(cache) {
       return cache.match(event.request).then(function (response) {
         console.log('URL:',event.request)
         return response || fetch(event.request).then(function(response) {
